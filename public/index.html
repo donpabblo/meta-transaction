@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Relayer</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Get some bootstrap default styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Construct a Bootstrap layout -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Sending Meta Tx</h1>
+                <p id="connect-msg">No wallet connected. Connect wallet to send Meta Tx</p>
+
+                <div class="alert alert-danger" id="alert-error-https" style="display: none">
+                    You can run this example only over HTTPS connection.
+                </div>
+
+                <div id="prepare">
+                    <button class="btn btn-primary" id="btn-connect">
+                        Connect wallet
+                    </button>
+                </div>
+
+                <div id="connected" style="display: none">
+
+                    <button class="btn btn-primary" id="btn-disconnect">
+                        Disconnect wallet
+                    </button>
+
+                    <hr>
+
+                    <div id="network">
+                        <p>
+                            <strong>Chain:</strong> <span id="network-name"></span>
+                        </p>
+
+                        <p>
+                            <strong>Selected account:</strong> <span id="selected-account"></span>
+                        </p>
+
+                    </div>
+
+                    <hr>
+
+                    <button class="btn btn-primary" id="btn-owner">
+                        View Flag
+                    </button>
+
+                    <p>
+                    <div id="owner" style="display: none">
+                        <p>
+                            <strong>Flag Owner:</strong> <span id="address-owner"></span>
+                        </p>
+                        <p>
+                            <strong>Flag Color:</strong> <span id="color-flag"></span>
+                        </p>
+                    </div>
+                    </p>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-primary" id="btn-metatx">
+                                Conquer Flag
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="color" aria-describedby="Flag Color" placeholder="Enter Flag Color">
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <p>
+                    <div id="metatx" style="display: none">
+                        <p>
+                            <strong>Fee:</strong> <span id="fee"></span>
+                        </p>
+                        <p>
+                            <strong>Payed by:</strong> <span id="paymaster"></span>
+                        </p>
+                    </div>
+                    </p>
+
+                </div>
+
+                <br>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="loader" class="overlay">
+        <div class="overlay__inner">
+            <div class="overlay__content"><span class="spinner"></span></div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="app.css">
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+
+</html>

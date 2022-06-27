@@ -1,0 +1,25 @@
+{
+  "name": "meta-transaction",
+  "version": "0.0.1",
+  "scripts": {
+    "ng": "ng",
+    "start": "node ./bin/www",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  },
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ethers": "^5.0.0",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@openzeppelin/contracts": "^4.5.0",
+    "hardhat": "^2.9.9"
+  }
+}
