@@ -5,9 +5,7 @@ import "@openzeppelin/contracts/metatx/MinimalForwarder.sol";
 
 contract Forwarder is MinimalForwarder {
 
-    //TODO Eventualmente aggiungere whitelist di chi può chiamare il Forwarder import "@openzeppelin/contracts/access/Ownable.sol";
-    //TODO Eventualmente aggiungere la funziona Pausable che mette in pausa il forwarding import "@openzeppelin/contracts/security/Pausable.sol";
-    
-
+    //TODO add whitelist of addresses enabled to use the Forwarder
+    //TODO add Pausable feature of "@openzeppelin/contracts/security/Pausable.sol";
 
 }
